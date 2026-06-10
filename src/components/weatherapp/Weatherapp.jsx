@@ -1,6 +1,6 @@
 import { useWeather } from '../hooks/useWeather.js';
 // IMPORTAMOS EL ARCHIVO CSS SEPARADO
-import './WeatherApp.css';
+import './Weatherapp.css';
 
 // Tus importaciones oficiales de @meteocons (se mantienen igual)
 import clearDay from '@meteocons/svg/fill/clear-day.svg';
