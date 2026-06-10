@@ -1,0 +1,213 @@
+/* Variables para la escala de colores estilo Windguru */
+:root {
+  --wg-calm: #aeedf2;
+  --wg-light: #6be06b;
+  --wg-moderate: #f5d033;
+  --wg-strong: #f28d30;
+  --wg-gale: #f23030;
+  --border-color: #d3d3d3;
+}
+
+/* Contenedor principal */
+.wg-container {
+  padding: 20px;
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Buscador y elementos de control */
+.search-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.option-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.option-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.gps-btn {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Tabla de Windguru */
+.wg-table-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  padding: 5px;
+}
+
+.wg-table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.wg-row-header {
+  border-bottom: 1px solid #ddd;
+  background-color: #ececec;
+}
+
+.wg-row-header td {
+  padding: 8px;
+  font-weight: bold;
+  min-width: 70px;
+  font-size: 12px;
+}
+
+.wg-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.wg-row-bg-white {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.wg-cell-label {
+  padding: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.wg-cell-label-bold {
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.wg-cell-time {
+  padding: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.wg-cell-icon {
+  padding: 5px;
+  background-color: rgb(0, 139, 139);
+}
+
+.wg-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* Celdas dinámicas de temperatura */
+.wg-cell-temp {
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+.temp-very-freezing { background-color: #198efc; color: #000; }
+.temp-freezing { background-color: #fff; color: #000; }
+.temp-very-cold { background-color: #a3c6e7; color: #000; }
+.temp-cold { background-color: #80bdf7; color: #000; }
+.temp-mild { background-color: #ebd12d; color: #000; }
+.temp-warm { background-color: #e57f22; color: #000; }
+.temp-hot { background-color: #e52222; color: #000; }
+.temp-extreme { background-color: #8b0000; color: #fff; }
+
+
+/* Celdas dinámicas del viento */
+.wg-cell-wind {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.wind-calm { background-color: var(--wg-calm); color: #000; }
+.wind-light { background-color: var(--wg-light); color: #000; }
+.wind-moderate { background-color: var(--wg-moderate); color: #000; }
+.wind-strong { background-color: var(--wg-strong); color: #000; }
+.wind-gale { background-color: var(--wg-gale); color: #000; }
+
+/* Dirección del viento */
+.wg-cell-dir {
+  padding: 8px;
+}
+
+.wg-arrow {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.wg-degrees {
+  font-size: 9px;
+  color: #777;
+}
+
+.wg-footer-text {
+  text-align: center;
+  color: #666;
+}
+
+.wg-row td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Escala de color para ráfagas de viento (un tono más encendido/oscuro que el viento base) */
+.rafaga-calm { background-color: #a3e1e7; color: #000; }
+.rafaga-light { background-color: #5cd65c; color: #000; }
+.rafaga-moderate { background-color: #ebd12d; color: #000; }
+.rafaga-strong { background-color: #e57f22; color: #fff; }
+.rafaga-gale { background-color: #e52222; color: #fff; }
+
+/* Fila de precipitaciones */
+.wg-cell-rain {
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* Resalta en azul si efectivamente está acumulando agua en esa hora */
+.has-rain {
+  background-color: #e1f0fa;
+  color: #1d70b8;
+}
