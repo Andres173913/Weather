@@ -111,22 +111,22 @@
     display: inline-block;
     width: 0;
     height: 0;
-    /* Dibujamos una punta de flecha estilizada apuntando hacia ARRIBA (0°) */
+    /* Cambiamos a border-top para que apunte hacia abajo por defecto */
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 14px solid #34495e; /* Color del vector de la flecha */
+    border-top: 14px solid #34495e; 
     position: relative;
     
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
 }
 
-/* El "palito" o cola de la flecha */
+/* Ajustamos la cola para que quede arriba de la punta */
 .wind-arrow-pure::after {
     content: '';
     position: absolute;
     left: -2px;
-    top: 14px;
+    top: -20px; /* Subimos la cola fuera del triángulo */
     width: 4px;
     height: 6px;
     background-color: #34495e;
