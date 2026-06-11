@@ -1,0 +1,60 @@
+/* Contenedor relativo para posicionar la lista flotante */
+.search-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+  width: 50%;
+}
+
+/* Campo de entrada de texto */
+.search-input {
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #999;
+}
+
+/* Menú desplegable de opciones */
+.options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  margin: 4px 0 0 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+/* Botones de selección de ciudad */
+.option-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.option-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.options-list li:last-child .option-btn {
+  border-bottom: none;
+}

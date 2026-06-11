@@ -1,0 +1,73 @@
+.astro-panel-container {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px auto 0 auto;
+    max-width: 100%;
+}
+
+.astro-panel-title {
+    font-size: 11px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.astro-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.astro-card {
+    flex: 1;
+    min-width: 140px;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.astro-card-highlight {
+    background-color: #f1f3f5;
+    border-color: #ced4da;
+}
+
+.astro-icon-wrapper img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.astro-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.astro-label {
+    font-size: 10px;
+    color: #868e96;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.astro-value {
+    font-size: 13px;
+    color: #212529;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.astro-value-phase {
+    font-size: 12px;
+    color: #1c7ed6;
+    font-weight: bold;
+}
