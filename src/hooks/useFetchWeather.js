@@ -15,6 +15,9 @@ export function useFetchWeather(setNombreLugar, limpiarBuscador) {
       if (!response.ok) throw new Error(`Error en el servidor de clima: ${response.status}`);
       const data = await response.json();
 
+      const rafagas = data.hourly.wind_gusts_10m ? data.hourly.wind_gusts_10m : null;
+      const rafagaknots = unidadViento === 'kn' && rafagas ? rafagas.map(gust => gust / 1.94384) : rafagas; // Convertir a nudos si es necesario
+
       // El mapeo de historialCndHorario se queda EXACTAMENTE IGUAL a como lo tenés ahora...
       const historialCndHorario = data.hourly.time.map((timeStr, index) => ({
         // ... todo tu código actual del map ...
@@ -26,7 +29,7 @@ export function useFetchWeather(setNombreLugar, limpiarBuscador) {
         viento: data.hourly.wind_speed_10m[index],
         humidity: data.hourly.relative_humidity_2m ? data.hourly.relative_humidity_2m[index] : null,
         direccionViento: data.hourly.wind_direction_10m ? data.hourly.wind_direction_10m[index] : null,
-        rafaga: data.hourly.wind_gusts_10m ? data.hourly.wind_gusts_10m[index] : null,
+        rafaga: rafagaknots ? rafagaknots[index] : null,
         precipitacion: data.hourly.precipitation ? data.hourly.precipitation[index] : null,
         nubesBajas: data.hourly.cloud_cover_low ? data.hourly.cloud_cover_low[index] : 0,
         nubesMedias: data.hourly.cloud_cover_mid ? data.hourly.cloud_cover_mid[index] : 0,
